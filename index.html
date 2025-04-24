@@ -1,0 +1,159 @@
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white fixed w-full z-10 top-0 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Coffee Haven</div>
+            <div class="space-x-4">
+                <a href="#home" class="hover:text-yellow-400">Home</a>
+                <a href="#services" class="hover:text-yellow-400">Services</a>
+                <a href="#coffee-types" class="hover:text-yellow-400">Coffee Types</a>
+                <a href="#about" class="hover:text-yellow-400">About</a>
+                <a href="#contact" class="hover:text-yellow-400">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085')">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Coffee Haven</h1>
+            <p class="text-xl mb-6">Discover the finest coffee crafted with love and care.</p>
+            <a href="#services" class="inline-block bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold text-lg transform hover:scale-110 transition-transform duration-300 animate-pulse">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Coffee Offerings</h2>
+            <div class="flex overflow-x-auto space-x-6 pb-4">
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md p-4">
+                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="Espresso" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold">Espresso</h3>
+                    <p class="text-gray-600">Rich and bold, a perfect shot of energy.</p>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md p-4">
+                    <img src="pi.1.jpg" alt="Cappuccino" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold">Cappuccino</h3>
+                    <p class="text-gray-600">Creamy foam with a strong coffee base.</p>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md p-4">
+                    <img src="pi.2.jpg" alt="Latte" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold">Latte</h3>
+                    <p class="text-gray-600">Smooth and milky, a coffee classic.</p>
+                </div>
+                <div class="flex-none w-64 bg-white rounded-lg shadow-md p-4">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3" alt="Cold Brew" class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold">Cold Brew</h3>
+                    <p class="text-gray-600">Chilled and refreshing, perfect for summer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Types Section -->
+    <section id="coffee-types" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Types of Coffee</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="Espresso" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Espresso</h3>
+                    <p class="text-gray-600">A concentrated coffee brewed by forcing hot water through finely-ground coffee.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="pi.1.jpg" alt="Cappuccino" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Cappuccino</h3>
+                    <p class="text-gray-600">Espresso with steamed milk and a thick layer of foam.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3" alt="Cold Brew" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-2xl font-semibold mb-2">Cold Brew</h3>
+                    <p class="text-gray-600">Coffee steeped in cold water for a smooth, bold flavor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-lg mb-2">Name</label>
+                    <input type="text" id="name" class="w-full p-3 rounded-md bg-gray-700 text-white">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-lg mb-2">Email</label>
+                    <input type="email" id="email" class="w-full p-3 rounded-md bg-gray-700 text-white">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-lg mb-2">Message</label>
+                    <textarea id="message" class="w-full p-3 rounded-md bg-gray-700 text-white" rows="5"></textarea>
+                </div>
+                <button class="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold w-full">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg text-gray-600 mb-4">At Coffee Haven, we are passionate about serving the finest coffee made from ethically sourced beans. Our mission is to create a warm and inviting space where coffee lovers can enjoy their favorite brews and connect with others.</p>
+                <p class="text-lg text-gray-600">With years of experience in the coffee industry, our team is dedicated to crafting exceptional coffee that delights your senses.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navbar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // GSAP Scroll Animation for Services Section
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.to(".flex-none:nth-child(odd)", {
+            x: 100,
+            scrollTrigger: {
+                trigger: "#services",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: true
+            }
+        });
+
+        gsap.to(".flex-none:nth-child(even)", {
+            x: -100,
+            scrollTrigger: {
+                trigger: "#services",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: true
+            }
+        });
+    </script>
+</body>
+</html>
+```
